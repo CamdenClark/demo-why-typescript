@@ -134,6 +134,13 @@ getOppositeDirection("N");
 // But if we use the enumerated value, it accepts it
 getOppositeDirection(CardinalDirection.North); 
 
+// We can do this a totally different way using string literals.
+const getOppositeDirectionUsingLiterals = (direction: "N" | "S" | "E" | "W") => {
+  return oppositeDirections[direction];
+}
+
+getOppositeDirectionUsingLiterals("N"); // Now we can do this!
+
 // We can define types unioning the literal values
 type primesUnder10 = 2 | 3 | 5 | 7;
 
